@@ -4506,8 +4506,8 @@ local function createcredit(creditinfos)
 
 	if creditinfos.ProfilePicture:find("https") then
 		PP = Instance.new("VideoFrame")
-		writefile("HawkHUB\\Assets\\Credits\\"..creditinfos.Name..".mp4",game:HttpGet(creditinfos.ProfilePicture))
-		PP.Video = getcustomasset("HawkHUB\\Assets\\Credits\\"..creditinfos.Name..".mp4")
+		writefile(creditinfos.Name..".mp4",game:HttpGet(creditinfos.ProfilePicture))
+		PP.Video = getcustomasset(creditinfos.Name..".mp4")
 		vid = PP
 		PP:Play()
 		vidcontent = PP.Video
